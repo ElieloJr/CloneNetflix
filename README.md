@@ -1,2 +1,2 @@
 # CloneNetflix
-Clone do app da Netflix desenvolvido em IOS
+Clone do app da Netflix desenvolvido em IOS (programaticamente)
