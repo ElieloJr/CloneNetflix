@@ -26,6 +26,7 @@ class HomeViewController: UIViewController {
         homeFeedTable.dataSource = self
         
         configureNavBar()
+        getTrendingMovies()
         
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         homeFeedTable.tableHeaderView = headerView
@@ -44,10 +45,20 @@ class HomeViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         homeFeedTable.frame = view.bounds
     }
+    private func getTrendingMovies() {
+        APICaller.shared.getTrendingMovies { result in
+            switch result {
+            case .success(let movies):
+                print(movies)
+            case .failure(_):
+                print("Não deu certo a requisição")
+            }
+        }
+    }
 }
-extension HomeViewController: UITableViewDelegate {
-    
-}
+
+extension HomeViewController: UITableViewDelegate {}
+
 extension HomeViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return sectionTitles.count
