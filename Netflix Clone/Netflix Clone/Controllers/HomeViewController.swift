@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .black
         view.addSubview(homeFeedTable)
         
         homeFeedTable.delegate = self
@@ -38,6 +38,7 @@ class HomeViewController: UIViewController {
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         homeFeedTable.tableHeaderView = headerView
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
     private func configureNavBar() {
         var image = UIImage(named: "netflixLogo")
         image = image?.withRenderingMode(.alwaysOriginal)
