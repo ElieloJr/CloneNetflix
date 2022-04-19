@@ -21,6 +21,7 @@
 		29DDFB02280EDBC600EDE2B7 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DDFB01280EDBC600EDE2B7 /* APICaller.swift */; };
 		29DDFB04280EE39400EDE2B7 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DDFB03280EE39400EDE2B7 /* Movie.swift */; };
 		29DDFB06280EEB7000EDE2B7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DDFB05280EEB7000EDE2B7 /* Extensions.swift */; };
+		29DDFB08280EF41100EDE2B7 /* Tv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DDFB07280EF41100EDE2B7 /* Tv.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		29DDFB01280EDBC600EDE2B7 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		29DDFB03280EE39400EDE2B7 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		29DDFB05280EEB7000EDE2B7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		29DDFB07280EF41100EDE2B7 /* Tv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tv.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				29DDFB03280EE39400EDE2B7 /* Movie.swift */,
+				29DDFB07280EF41100EDE2B7 /* Tv.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				29BB6B1E27D0FEDA00B19518 /* SceneDelegate.swift in Sources */,
 				29BB6B3327D1264200B19518 /* UpcomingViewController.swift in Sources */,
 				29DDFB04280EE39400EDE2B7 /* Movie.swift in Sources */,
+				29DDFB08280EF41100EDE2B7 /* Tv.swift in Sources */,
 				29BB6B3127D1260100B19518 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
