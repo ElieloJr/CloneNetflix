@@ -20,6 +20,7 @@
 		29D7340427F3569B00C4F2C3 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D7340327F3569B00C4F2C3 /* HeroHeaderUIView.swift */; };
 		29DDFB02280EDBC600EDE2B7 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DDFB01280EDBC600EDE2B7 /* APICaller.swift */; };
 		29DDFB04280EE39400EDE2B7 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DDFB03280EE39400EDE2B7 /* Movie.swift */; };
+		29DDFB06280EEB7000EDE2B7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DDFB05280EEB7000EDE2B7 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		29D7340327F3569B00C4F2C3 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 		29DDFB01280EDBC600EDE2B7 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		29DDFB03280EE39400EDE2B7 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		29DDFB05280EEB7000EDE2B7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		29BB6B3B27D1337300B19518 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				29DDFB05280EEB7000EDE2B7 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				29D7340427F3569B00C4F2C3 /* HeroHeaderUIView.swift in Sources */,
 				29BB6B3727D126CD00B19518 /* DownloadsViewController.swift in Sources */,
 				29BB6B1C27D0FEDA00B19518 /* AppDelegate.swift in Sources */,
+				29DDFB06280EEB7000EDE2B7 /* Extensions.swift in Sources */,
 				29BB6B1E27D0FEDA00B19518 /* SceneDelegate.swift in Sources */,
 				29BB6B3327D1264200B19518 /* UpcomingViewController.swift in Sources */,
 				29DDFB04280EE39400EDE2B7 /* Movie.swift in Sources */,
