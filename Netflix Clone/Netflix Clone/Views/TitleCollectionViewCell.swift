@@ -26,7 +26,7 @@ class TitleCollectionViewCell: UICollectionViewCell {
     }
     
     func configureCell(with link: String) {
-        guard let imageURL = URL(string: link) else { return }
+        guard let imageURL = URL(string: "https://image.tmdb.org/t/p/w500\(link)") else { return }
         DispatchQueue.global().async {
             guard let imageData = try? Data(contentsOf: imageURL) else { return }
             let imageEnd = UIImage(data: imageData)
