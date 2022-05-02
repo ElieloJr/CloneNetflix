@@ -27,6 +27,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         discoverTable.delegate = self
         discoverTable.dataSource = self
+        searchController.searchResultsUpdater = self
         
         setupView()
         fetchDiscoverMovies()
@@ -52,12 +53,10 @@ class SearchViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.discoverTable.reloadData()
                 }
-            case .failure(let error):
-                print(error)
+            case .failure(let error): print(error)
             }
         }
     }
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         discoverTable.frame = view.bounds
@@ -80,6 +79,26 @@ extension SearchViewController: UITableViewDataSource {
         cell.configure(with: TitleViewModel(titleName: (title.original_title ?? title.original_name) ?? "Unknown title name", posterURL: title.poster_path ?? ""))
         return cell
     }
-    
-    
+}
+
+extension SearchViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        
+        guard let query = searchBar.text,
+              !query.trimmingCharacters(in: .whitespaces).isEmpty,
+              query.trimmingCharacters(in: .whitespaces).count >= 3,
+        let resultsController = searchController.searchResultsController as? SearchResultsViewController else { return }
+        
+        APICaller.shared.search(with: query) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let titles):
+                    resultsController.titles = titles
+                    resultsController.searchResultsCollectionView.reloadData()
+                case .failure(let error): print(error)
+                }
+            }
+        }
+    }
 }

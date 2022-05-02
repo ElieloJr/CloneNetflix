@@ -11,7 +11,7 @@ class SearchResultsViewController: UIViewController {
     
     var titles: [Title] = [Title]()
 
-    private let searchResultsCollectionView: UICollectionView = {
+    let searchResultsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: (UIScreen.main.bounds.width/3)-5, height: 200)
         layout.minimumInteritemSpacing = 0
@@ -38,10 +38,13 @@ extension SearchResultsViewController: UICollectionViewDelegate { }
 
 extension SearchResultsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return titles.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TitleCollectionViewCell.identifier, for: indexPath) as? TitleCollectionViewCell else { return UICollectionViewCell() }
+        if let poster = titles[indexPath.row].poster_path {
+            cell.configureCell(with: poster)
+        }
         return cell
     }
 }
